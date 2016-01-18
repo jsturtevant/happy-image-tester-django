@@ -30,3 +30,11 @@ input[type='file'] {
 .body-content{
     margin-top: 50px;
 }
+
+h1.happy .happy{
+     color:green;     
+}
+ 
+h1.sad .not{
+    color:red;     
+}

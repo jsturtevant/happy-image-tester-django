@@ -31,11 +31,11 @@ def upload(request):
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
             file = request.FILES['file']
-            modified = handle_uploaded_file(file)
+            modified, happyscore = handle_uploaded_file(file)
             modified.seek(0)
             image = base64.b64encode(modified.read())
  
-            return render(request, 'app/result.html', {'image': image, 'form':form})
+            return render(request, 'app/result.html', {'image': image, 'ishappy':happyscore})
     else:
         form = UploadFileForm()
     return render(request, 'app/index.html',{'form':form})
@@ -47,6 +47,8 @@ def handle_uploaded_file(file):
     im = Image.open(file)
     draw = ImageDraw.Draw(im)
  
+    happyscore = 0
+
     for emotionResult in recognizeResult:
         rect = emotionResult['faceRectangle']
         x = emotionResult['faceRectangle']['left']
@@ -55,7 +57,15 @@ def handle_uploaded_file(file):
         y1 = emotionResult['faceRectangle']['top'] + emotionResult['faceRectangle']['height']
  
         draw.rectangle([x,y,x1,y1])
+
+        happiness = emotionResult['scores']["happiness"]
+        sadness = emotionResult['scores']["sadness"]
+ 
+        if (happiness > sadness):
+            happyscore = happyscore + 1
+        else:
+            happyscore = happyscore - 1
         
     modified = TemporaryFile()
     im.save(modified,'JPEG')
-    return modified
+    return modified, happyscore
