@@ -3,3 +3,30 @@
     /*background-color: #86C1B9; 
     color:#DF5320;*/
 }
+
+.container{
+    margin :0 auto;
+    max-width:800px;
+    text-align:center;
+}
+
+header h1 .happy{
+    margin-left:-50px;
+}
+
+header h1 .or{
+    padding-left: 90px;
+}
+
+header .fa.fa-frown-o{
+    margin-top:-35px;
+}
+
+input[type='file'] {
+    display: inline-block;
+    width:175px;
+}
+
+.body-content{
+    margin-top: 50px;
+}
