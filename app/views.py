@@ -11,6 +11,8 @@ from projectoxford.Client import Client
 from projectoxford.Emotion import Emotion
 from tempfile import TemporaryFile
 from django.conf import settings
+from PIL import ImageDraw
+from PIL import Image
 
 def home(request):
     """Renders the home page."""
@@ -38,10 +40,19 @@ def upload(request):
 def handle_uploaded_file(file):
     client = Client.emotion(settings.OXFORD_KEY)
     recognizeResult  = client.recognize({'stream': file})
+
+    im = Image.open(file)
+    draw = ImageDraw.Draw(im)
  
     for emotionResult in recognizeResult:
         rect = emotionResult['faceRectangle']
-        scores = emotionResult['scores']
-       
-        modified = TemporaryFile()
-        return modified
+        x = emotionResult['faceRectangle']['left']
+        y = emotionResult['faceRectangle']['top']
+        x1 = emotionResult['faceRectangle']['left'] + emotionResult['faceRectangle']['width']
+        y1 = emotionResult['faceRectangle']['top'] + emotionResult['faceRectangle']['height']
+ 
+        draw.rectangle([x,y,x1,y1])
+        
+    modified = TemporaryFile()
+    im.save(modified,'JPEG')
+    return modified
