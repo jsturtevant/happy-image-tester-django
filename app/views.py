@@ -13,6 +13,7 @@ from tempfile import TemporaryFile
 from django.conf import settings
 from PIL import ImageDraw
 from PIL import Image
+import base64
 
 def home(request):
     """Renders the home page."""
@@ -31,8 +32,10 @@ def upload(request):
         if form.is_valid():
             file = request.FILES['file']
             modified = handle_uploaded_file(file)
+            modified.seek(0)
+            image = base64.b64encode(modified.read())
  
-            return render(request, 'app/result.html')
+            return render(request, 'app/result.html', {'image': image, 'form':form})
     else:
         form = UploadFileForm()
     return render(request, 'app/index.html',{'form':form})

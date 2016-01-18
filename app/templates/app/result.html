@@ -2,6 +2,8 @@
 
 {% block content %}
 
-<p>Show result here</p>
+{% if image %}
+   <img src="data:image/png;base64,{{ image }}">
+{% endif %}
 
 {% endblock %}
