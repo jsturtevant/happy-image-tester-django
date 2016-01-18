@@ -13,6 +13,8 @@ ALLOWED_HOSTS = (
     'localhost',
 )
 
+OXFORD_KEY = os.getenv("OXFORD_KEY")
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )

@@ -9,6 +9,8 @@ from datetime import datetime
 from .forms import UploadFileForm
 from projectoxford.Client import Client
 from projectoxford.Emotion import Emotion
+from tempfile import TemporaryFile
+from django.conf import settings
 
 def home(request):
     """Renders the home page."""
@@ -34,7 +36,7 @@ def upload(request):
     return render(request, 'app/index.html',{'form':form})
 
 def handle_uploaded_file(file):
-    client = Client.emotion("<Key goes here>")
+    client = Client.emotion(settings.OXFORD_KEY)
     recognizeResult  = client.recognize({'stream': file})
  
     for emotionResult in recognizeResult:
