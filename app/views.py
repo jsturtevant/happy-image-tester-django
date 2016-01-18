@@ -18,4 +18,7 @@ def home(request):
         context_instance = RequestContext(request)
     )
 
+def upload(request):
+    return render(request, 'app/result.html')
+
 
