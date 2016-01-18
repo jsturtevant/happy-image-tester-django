@@ -10,10 +10,14 @@
 </head>
 
 <body>
-
+  <div class="container">
     <header>
             <h1>
-                Happy or Not
+                  <span class="happy"><i class="fa fa-smile-o fa-2x"></i>Happy</span>
+                  <br/>
+                  <span class="or">Or </span>
+                  <span class="not">Not </span>
+                  <i class="fa fa-frown-o fa-2x"></i>
             </h1>
     </header>
 
@@ -27,7 +31,7 @@
     <footer>
         <p>&copy; {{ year }} - Happy or Mad Application</p>
     </footer>
-
+  </div>
     {% block scripts %}{% endblock %}
 
 </body>
