@@ -2,10 +2,10 @@
 
 {% block content %}
 
- <form>  
+<form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">  
+    {% csrf_token %}
     <div >
-    <label for="InputFile">File input</label>
-    <input type="file" id="InputFile">
+    {{ form.file }}
     <p class="help-block">Note: We do not store your image.</p>
     </div>
  
