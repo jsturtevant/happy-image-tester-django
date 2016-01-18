@@ -60,6 +60,7 @@
     <Content Include="app\static\app\fonts\fontawesome-webfont.woff" />
     <Content Include="app\static\app\fonts\fontawesome-webfont.woff2" />
     <Content Include="app\static\app\fonts\FontAwesome.otf" />
+    <Content Include="app\templates\app\result.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\site.css" />
