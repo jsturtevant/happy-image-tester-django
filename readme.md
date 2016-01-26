@@ -2,7 +2,9 @@
 
 This project is a demo to show how to use https://www.projectoxford.ai/.  You will need to obtain a key for the Emotion API [here](https://www.projectoxford.ai/Subscription).
 
-You can find a demo at http://happyornot.azurewebsites.net/
+You can find a demo at http://happyimagetester.azurewebsites.net/
+
+Prefer Node.js? Check out this [sample in Node.js](https://github.com/jsturtevant/happy-image-tester-nodejs).
 
 ## Setup
 This project can be [Setup on Windows](#setup-windows) or [Mac](#setup-mac).  You will need to add the Emotion API key to your environment variables (see below on how to do that for local environment). 
