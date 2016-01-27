@@ -12,8 +12,8 @@ This project can be [Setup on Windows](#setup-windows) or [Mac](#setup-mac).  Yo
 ### Setup Windows
 1. [Install Python 3.5 or greater](https://www.python.org/downloads/) (it will work with 2.7 if you want to use it)
 2. Open command prompt and Clone this repo
-3. Move into cloned repo folder: ```CD happy-or-not-django```
-4. Create a virtual environment: ```c:\python34\python.exe -m venv env```
+3. Move into cloned repo folder: ```CD happy-image-tester-django```
+4. Create a virtual environment: ```c:\python34\python.exe -m venv env```  (your path to Python may vary)
 5. Install library requirements: ```env\scripts\pip install -r requirements.txt```
 6. Open the file ```env\scripts\activation.bat``` 
 7. At the end of the file before ```:END``` add  ```set "OXFORD_KEY=<yourkey>"``` and save file.
@@ -27,7 +27,7 @@ When done with development de-activate virtual environment with ```env\Scripts\d
 ### Setup Mac
 1. [Install Python 3.5 or greater](https://www.python.org/downloads/) (it will work with 2.7 if you want to use it)
 2. Open command prompt and Clone this repo
-3. Move into cloned repo folder: ```CD happy-or-not-django```
+3. Move into cloned repo folder: ```CD happy-image-tester-django```
 4. Create a virtual environment: ```python3 -m venv env```
 5. Install library requirements: ```env/bin/pip install -r requirements.txt```
 6. Open the file ```env\scripts\activation.bat``` 
