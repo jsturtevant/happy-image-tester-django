@@ -30,9 +30,9 @@ When done with development de-activate virtual environment with ```env\Scripts\d
 3. Move into cloned repo folder: ```CD happy-image-tester-django```
 4. Create a virtual environment: ```python3 -m venv env```
 5. Install library requirements: ```env/bin/pip install -r requirements.txt```
-6. Open the file ```env\scripts\activation.bat``` 
-7. At the middle of the file after  ```EXPORT PATH``` add  ```export "OXFORD_KEY=<yourkey>"``` and save file.
-8. Activate Virtual Environment: ```env/bin/activate```
+6. Open the file ```env/bin/activation``` in your favorite text editor
+7. At the middle of the file, after  ```EXPORT PATH``` add  ```export "OXFORD_KEY=<yourkey>"``` and save file.
+8. Activate Virtual Environment: ```source env/bin/activate```
 9. Start development server: ```env/bin/python manage.py runserver```
 10. Browse to the website: open favorite browser to 127.0.0.1:8000
 11. Use sample images to upload a file.
