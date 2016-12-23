@@ -1,0 +1,11 @@
+
+version: '2'
+
+services:
+  happy-image-tester-django:
+    image: happy-image-tester-django:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000

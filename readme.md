@@ -7,9 +7,16 @@ You can find a demo at http://happyimagetester.azurewebsites.net/
 Prefer Node.js? Check out this [sample in Node.js](https://github.com/jsturtevant/happy-image-tester-nodejs).
 
 ## Setup
+### Use Docker (https://www.docker.com/) 
+1. Clone this repo and move into folder: ```CD happy-image-tester-django```
+2. Run ```docker-compose -f ./docker-compose.debug.yml up```
+3. Browse to the website: open favorite browser to 127.0.0.1:8000
+4. Use sample images to upload a file
+
+### Without docker
 This project can be [Setup on Windows](#setup-windows) or [Mac](#setup-mac).  You will need to add the Emotion API key to your environment variables (see below on how to do that for local environment). 
 
-### Setup Windows
+#### Setup Windows
 1. [Install Python 3.5 or greater](https://www.python.org/downloads/) (it will work with 2.7 if you want to use it)
 2. Open command prompt and Clone this repo
 3. Move into cloned repo folder: ```CD happy-image-tester-django```
@@ -24,7 +31,7 @@ This project can be [Setup on Windows](#setup-windows) or [Mac](#setup-mac).  Yo
 
 When done with development de-activate virtual environment with ```env\Scripts\deactivate.bat```
 
-### Setup Mac
+#### Setup Mac
 1. [Install Python 3.5 or greater](https://www.python.org/downloads/) (it will work with 2.7 if you want to use it)
 2. Open command prompt and Clone this repo
 3. Move into cloned repo folder: ```CD happy-image-tester-django```
