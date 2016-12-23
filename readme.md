@@ -1,6 +1,6 @@
 # Happy or Not
 
-This project is a demo to show how to use https://www.projectoxford.ai/.  You will need to obtain a key for the Emotion API [here](https://www.projectoxford.ai/Subscription).
+This project is a demo to show how to use https://www.microsoft.com/cognitive-services.  You will need to obtain a key for the Emotion API [here](https://www.microsoft.com/cognitive-services/en-US/subscriptions).
 
 You can find a demo at http://happyimagetester.azurewebsites.net/
 
@@ -9,9 +9,12 @@ Prefer Node.js? Check out this [sample in Node.js](https://github.com/jsturtevan
 ## Setup
 ### Use Docker (https://www.docker.com/) 
 1. Clone this repo and move into folder: ```CD happy-image-tester-django```
-2. Run ```docker-compose -f ./docker-compose.debug.yml up```
-3. Browse to the website: open favorite browser to 127.0.0.1:8000
-4. Use sample images to upload a file
+2. Add environemnt variable with your Cognitive Services key to your current console session:
+    mac: ```export OXFORD_KEY=<yourkey>```
+    windows: ```set "OXFORD_KEY=<yourkey>"```
+3. Run ```docker-compose -f ./docker-compose.debug.yml up``` from same session
+4. Browse to the website: open favorite browser to 127.0.0.1:8000
+5. Use sample images to upload a file
 
 ### Without docker
 This project can be [Setup on Windows](#setup-windows) or [Mac](#setup-mac).  You will need to add the Emotion API key to your environment variables (see below on how to do that for local environment). 
