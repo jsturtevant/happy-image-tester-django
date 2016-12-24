@@ -12,7 +12,7 @@ Prefer Node.js? Check out this [sample in Node.js](https://github.com/jsturtevan
 2. Add environemnt variable with your Cognitive Services key to your current console session:
     mac: ```export OXFORD_KEY=<yourkey>```
     windows: ```set "OXFORD_KEY=<yourkey>"```
-3. Run ```docker-compose -f ./docker-compose.debug.yml up``` from same session
+3. Run ```docker run -p 8000:8000 -e OXFORD_KEY jsturtevant/happy-image-tester-django``` or use compose ```docker-compose -f ./docker-compose.debug.yml up``` from same session
 4. Browse to the website: open favorite browser to 127.0.0.1:8000
 5. Use sample images to upload a file
 
